@@ -1,0 +1,167 @@
+.cart {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: center;
+
+    @include media("<=tablet") {
+        flex-direction: column;
+    }
+
+    @include media("<=phone") {
+        padding: 2rem 1rem;
+    }
+
+    &-summary {
+        border: 1px solid black;
+        padding: 1rem;
+        margin-left: 20%;
+        width: 400px;
+
+        @include media("<=tablet") {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &__heading {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        &__col {
+            width: 50%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            &--primary {
+                border-bottom: 1px solid $sw-secondary;
+            }
+
+            &--price {
+                text-align: end;
+
+                .qty {
+                    font-size: 0.75rem;
+                }                
+            }
+        }
+
+        &__table {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        &__total {
+            display: inline-flex;
+            width: 100%;
+            margin-bottom: 2rem;
+            span {
+                font-size: 1.5rem;
+                &:first-of-type {
+                    flex-grow: 1;
+                }
+            }
+        }
+
+        &__check-out {
+            margin-bottom: 3rem;
+            a {
+                padding: 0.5rem 2rem;
+            }
+        }
+    }
+
+    &-items {
+        @include media("<=tablet") {
+            margin-bottom: 2rem;
+        }
+
+        &__heading {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        &__table {
+            width: 100%;
+        }
+
+        &__row {
+            border-bottom: 1px solid $sw-secondary;
+        }
+
+        &__col {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            &--quantity {
+                padding-left: 40px;
+
+                @include media("<=tablet") {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        &__item-info {
+            display: flex;
+
+            @include media("<=phone") {
+                flex-direction: column;
+            }
+        }
+
+        &__item-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+
+        &__item-photo {
+            height: 100px;
+
+            @include media("<=phone") {
+                width: 100px;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__item-description {
+            margin-bottom: 15px;
+        }
+
+        &__item-price {
+            font-size: 1.25rem;
+            .per-unit {
+                font-size: 0.75rem;
+            }
+        }
+
+        &__quantity-info {
+            display: flex;
+            height: 100px;
+        }
+
+        &__quantity {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.85rem;
+
+            & > span:first-of-type {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__remove-item {
+            height: 100%;
+            margin-left: 20px;
+        }
+
+        &__remove-btn {
+            background: none;
+            color: $body-text;
+        }
+    }
+}

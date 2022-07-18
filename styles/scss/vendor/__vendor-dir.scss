@@ -1,0 +1,17 @@
+/*
+This file is used to contain all vendor imports.
+*/
+
+// Normalize.scss
+@import "normalize/normalize";
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Font Awesome
+@import "font-awesome/solid";
+@import "font-awesome/fontawesome";
+@import "font-awesome/brands";
+
+// include-media
+@import "include-media";

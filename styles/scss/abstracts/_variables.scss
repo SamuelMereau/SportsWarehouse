@@ -1,0 +1,31 @@
+/* Global Variables */
+
+// Colours
+$sw-primary: var(--sw-primary);
+$sw-secondary: var(--sw-secondary);
+$sw-accent: var(--sw-accent);
+$sw-accent-2: var(--sw-accent-2);
+$sw-accent-3: var(--sw-accent-3);
+
+$sw-bullet-primary: var(--sw-bullet-primary);
+$sw-bullet-secondary: var(--sw-bullet-secondary);
+
+$body-text: var(--body-text);
+$error-red: var(--error-red);
+$success-green: var(--success-green);
+
+$background: var(--background);
+
+:root {
+    --sw-primary: #2dacea;
+    --sw-secondary: #f96929;
+    --sw-accent: #2492c6;
+    --sw-accent-2: #317590;
+    --sw-accent-3: #052934;
+    --sw-bullet-primary: #176a86;
+    --sw-bullet-secondary: #943f17;
+    --body-text: #595959;
+    --error-red: #de423b;
+    --success-green: #7bd67c;
+    --background: #ffffff;
+}

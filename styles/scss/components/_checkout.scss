@@ -1,0 +1,146 @@
+.checkout {
+    input, select {
+        width: 100%;
+    }
+
+    &__fieldset {
+        margin-bottom: 1.5rem;
+
+        &--shipping {
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                padding-right: 25%;
+                margin-bottom: 30px;
+            }
+        }
+
+        &--payment {
+            padding-right: 50%;
+            & > div {
+                margin-bottom: 30px;
+            }
+
+            .checkout__label {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__heading {
+        border-bottom: 1px solid $sw-secondary;
+        margin-bottom: 20px;
+    }
+
+    h2.checkout__heading {
+        margin-bottom: 30px;
+    }
+
+    &__subheading {
+        font-size: 1.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    &__note {
+        font-size: 0.75rem;
+    }
+
+    &__input-wrapper {
+        width: 450px;
+    }
+
+    &__name-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    &__address-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+
+        &--street-address, &--street-address-2 {
+            grid-column-end: span 2;
+        }
+
+        &--postcode {
+            width: 80%;
+        }
+    }
+
+    &__contact-number-inputs,
+    &__email-address-inputs {
+        width: 75%;
+    }
+
+    &__card-number-input {
+        display: flex;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        padding: 10px 14px;
+        margin-bottom: 5px;
+
+        & > input {
+            border: none;
+            padding: 0;
+
+            &:focus-visible {
+                outline: none !important;
+            }
+        }
+    }
+
+    &__card-icon-wrapper {
+        display: flex;
+        margin-right: 20px;
+        height: 30px;
+        & > img {
+            height: 100%;
+        }
+    }
+
+    &__card-icon-strip {
+        display: flex;
+        & > img {
+            height: 24px;
+            margin-right: 7px;
+        }
+    }
+
+    &__card-small-numbers {
+        display: flex;
+    }
+
+    &__card-expiration-inputs {
+        display: grid;
+        grid-template-columns: 70px 25px 70px;
+        margin-right: 50px;
+
+        .dividing-line {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__card-cvc {
+        width: 100px;
+    }
+
+    &__confirm-payment {
+        width: 50% !important;
+    }
+}
+
+/* Post-checkout confirmation message */
+.thanks {
+    &__body-text {
+        margin-bottom: 1rem;
+    }
+
+    &__order-number {
+        font-weight: bold;
+    }
+}

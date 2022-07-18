@@ -1,0 +1,168 @@
+body {
+    background: $background;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: $sw-primary;
+
+    &:not([href]) {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+input:disabled, .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+input, a {
+    &.filled {
+        color: white !important;
+        background: $sw-primary !important;
+    }
+
+    &.filled--error {
+        color: white !important;
+        background: $error-red !important;
+    }
+
+    &.outline {
+        border: 2px solid $sw-primary !important;
+        color: $sw-primary !important;
+        background: transparent !important;
+    }
+
+    &.outline--error {
+        border: 2px solid $error-red !important;
+        color: $error-red !important;
+        background: transparent !important;
+        transition: background 0.3s, color 0.3s;
+        &:hover {
+            background: $error-red !important;
+            color: #ffffff !important;
+        }
+    }
+}
+
+table {
+    a, a * {
+        color: $sw-primary;
+    }
+}
+
+table * {
+    color: $body-text;
+}
+
+button, input[type="button"], input[type="submit"] {
+    border: none;
+    color: #ffffff;
+    background: $sw-primary;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input, select, textarea {
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 7px 14px;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+*:focus-visible {
+    outline: thin solid $sw-accent-3 !important;
+    border-radius: 2px;
+}
+
+.screen-reader-text {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-1000vh);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    
+    &:focus-visible {
+        transform: translateY(0%);
+    }
+}
+
+// Used to mark inputs as invalid
+
+.error-message {
+    // Default styling for error messages not affected by a form
+    font-size: 0.75rem;
+    color: $error-red;
+}
+
+form {
+    .is-invalid {
+        border: 1px solid $error-red;
+        color: $error-red;
+
+        &::placeholder {
+            color: $error-red;
+        }
+
+        & ~ .error-message {
+            display: inline-block;
+        }
+    }
+
+    .error-message {
+        display: none;
+    }
+}
+
+.success {
+    padding: 10px 20px;
+    background: $success-green;
+    border: 1px solid green;
+    color: #ffffff;
+}
+
+.container {
+    padding: 0 8rem;
+    width: 100%;
+
+    @include media("<=1220px") {
+        padding: 0 4rem;
+    }
+
+    &--fluid {
+        padding: 0;
+    }
+}
+
+.rounded {
+    border-radius: 500px !important;
+    &--left-only {
+        border-top-left-radius: 500px !important;
+        border-bottom-left-radius: 500px !important;
+    }
+    &--right-only {
+        border-top-right-radius: 500px !important;
+        border-bottom-right-radius: 500px !important;
+    }
+    &--circle {
+        border-radius: 50% !important;
+    }
+}

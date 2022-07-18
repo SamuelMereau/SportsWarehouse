@@ -1,0 +1,55 @@
+.login {
+    display: flex;
+    justify-content: center;
+    
+    &__wrapper {
+        padding: 5rem 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 400px;
+    }
+
+    &__heading {
+        position: relative;
+        text-align: center;
+        margin-bottom: 4rem;
+        margin-top: 0;
+        padding-bottom: 1.5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background-color: $sw-secondary;
+            width: 100px;
+            top: 100%;
+            left: 37%;
+        }
+    }
+
+    &__form-wrapper {
+        padding: 3rem;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(249, 105, 41, 0.75);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        
+        label {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.error-message--login-incorrect {
+    margin-top: 10px;
+    text-align: center;
+}

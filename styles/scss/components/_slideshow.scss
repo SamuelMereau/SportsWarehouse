@@ -1,0 +1,80 @@
+.slideshow-wrapper {
+    background: rgba(211, 211, 211, 0.25);
+    margin: 0 8rem;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    @include media("<=tablet") {
+        display: none;
+    }
+
+    &__img-anchor {
+        display: inline-flex;
+        justify-content: center;
+        > img {
+            width: 100%;
+            height: 100%;
+            max-width: max-content;
+        }
+    }
+
+    &__dot-wrapper {
+        position: absolute;
+        bottom: 12px;
+        left: 47%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 2px;
+    }
+
+    &__dot {
+        width: 18px;
+        height: 18px;
+        background-image: url('../../img/circle-option.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.75;
+        }
+    }
+
+    &__dot.slideshow__dot--checked {
+        background-image: url('../../img/circle-filled.png');
+
+        &:hover {
+            cursor: auto;
+            opacity: 1;
+        }
+    }
+}
+
+/* Modifications to Swiper styling */
+.swiper-pagination-bullet {
+    border: 1px solid white;
+    background: rgba(46, 172, 234, 0.75);
+    opacity: 0.8;
+    width: 16px;
+    height: 16px;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.65;
+        cursor: pointer;
+    }
+
+    &-active {
+        background-color: $sw-primary;
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

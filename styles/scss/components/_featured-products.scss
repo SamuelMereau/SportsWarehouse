@@ -1,0 +1,140 @@
+.gallery {
+    display: flex;
+    gap: 1rem;
+    height: auto;
+
+    &--space-evenly {
+        justify-content: space-evenly;
+    }
+    
+    @include media(">tablet") {
+        flex-wrap: wrap;
+    }
+
+    @include media("<=phone") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+        margin: 2rem 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #f4f4f4;
+        border-radius: 5px;
+        width: 180px;
+        transition: all 0.3s;
+
+        @include media("<=phone") {
+            border: none;
+            width: 40vw;
+        }
+
+        &:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 2px 2px 5px $sw-secondary;
+
+            @include media("<=phone") {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__product-img {
+        height: 210px;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media("<=phone") {
+            height: 150px;
+        }
+    }
+
+    &__product-img-anchor {
+        @include media("<=phone") {
+            img {
+                height: 80% !important;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+        height: 175px;
+        display: flex;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        img {
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    &__price {
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
+
+        &--sale {
+            color: $sw-secondary;
+        }
+
+        &--old {
+            color: $body-text;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        &--strikethrough {
+            font-size: 1rem;
+            text-decoration: line-through;
+        }
+
+        @include media("<=phone") {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__product-name {
+        margin: 0;
+
+        @include media("<=phone") {
+            line-height: 1;
+        }
+
+        > a {
+            text-decoration: none;
+            color: $sw-accent-2;
+            font-weight: normal;
+            font-size: 1rem;
+
+            @include media("<=phone") {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @include media("<=990px") {
+        flex-wrap: wrap;
+    }
+
+    @include media("<=tablet") {
+        padding: 0 2rem;
+    }
+}
+
+@include media("<=tablet") {
+    #featured-products, 
+    #category-items-wrapper,
+    #search-items-wrapper {
+        padding: 0;
+
+        .h2--primary {
+            margin-left: 1rem;
+        }
+    }
+}

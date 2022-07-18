@@ -1,0 +1,24 @@
+html, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+    color: $body-text;
+}
+
+.h1 {
+    &--primary {
+        background-color: $sw-secondary;
+        color: #ffffff;
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 2rem;
+    }
+}
+
+.h2 {
+    font-weight: normal;
+    font-size: 1rem;
+    &--primary {
+        background: $sw-secondary;
+        color: #ffffff;
+        padding: 0.75rem 2rem;
+    }
+}

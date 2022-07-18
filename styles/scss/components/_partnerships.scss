@@ -1,0 +1,53 @@
+.brands {
+    display: flex;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+
+    @include media("<=tablet") {
+        flex-direction: column;
+        height: auto;
+    }
+
+    &__text-wrapper {
+        width: 30%;
+        padding: 0 3rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media("<=tablet") {
+            width: 100%;
+            padding: 1rem 0 2rem 1rem;
+        }
+    }
+
+    &__brands-strip {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 6.5rem;
+        padding-left: 2.5rem;
+        background: $sw-accent-3;
+
+        @include media("<=tablet") {
+            width: 100%;
+            height: auto;
+            border-radius: 0 !important;
+            padding: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+}
+
+@include media("<=tablet") {
+    #partnerships {
+        padding: 0;
+
+        .h2--primary {
+            margin-left: 1rem;
+        }
+    }
+}
